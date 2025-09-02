@@ -2,19 +2,18 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
+  <div class="fixed inset-0 -z-10 bg-repeat" style="background-image: url('/baggrundsstreg.png'); background-size: 40px;"></div>
   <section class="relative my-50">
     <h1 class="uppercase font-bold text-[160px]/30 break-all relative z-20">multimediedesignermultimediedesignermultimediedesigner</h1>
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-110 h-145 bg-pink-300 z-10"></div>
-    <img src="mig2.png" alt="profil billede" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-100 grayscale z-30" />
+    <img src="/mig2.png" alt="profil billede" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-100 grayscale z-30" />
   </section>
   <section class="grid grid-cols-12 relative">
     <div class="w-full h-full absolute z-10">
-      <img src="streg1.png" alt="pyntestreg" class="col-span-11" />
+      <img src="/streg1.png" alt="pyntestreg" class="col-span-11" />
     </div>
 
     <div class="col-span-6 col-start-7 pr-40 top-20">
@@ -38,18 +37,24 @@ import thumbsup from "../assets/images/thumbsup.png";
       <p>foto og video redigering</p>
       <p>adobe programmer</p>
     </div>
-    <img src="streg2.png" alt="pynte streg2" class="col-start-9 col-span-6 mt-20" />
+    <img src="/streg2.png" alt="pynte streg2" class="col-start-9 col-span-6 mt-40" />
   </section>
   <section class="grid grid-cols-12">
     <img class="col-span-4" src="streg3.png" alt="" />
     <div class="col-span-6 col-start-5 pl-40 mt-20 mb-20">
       <h2 class="uppercase font-bold text-8xl">Socials</h2>
       <div class="flex gap-10 mt-20">
-        <img src="" alt="facebook" />
-        <img src="" alt="instagram" />
-        <img src="" alt="linkedin" />
+        <Link href="https://www.facebook.com/profile.php?id=100009548483404&locale=da_DK">
+          <img src="/Facebook.png" alt="facebook" class="w-20" />
+        </Link>
+        <Link href="https://www.instagram.com/signe__munk/">
+          <img src="/Instagram.png" alt="instagram" class="w-20" />
+        </Link>
+        <Link href="https://www.linkedin.com/in/signe-munk-54b69b285/">
+          <img src="/Linkedin.png" alt="linkedin" class="w-20" />
+        </Link>
       </div>
     </div>
-    <img class="col-span-4 col-start-9 mt-0" src="streg4.png" alt="" />
+    <img class="col-span-4 col-start-9 -mt-90" src="/streg4.png" alt="" />
   </section>
 </MainLayout>
