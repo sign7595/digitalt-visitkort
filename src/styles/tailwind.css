@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,6 +6,8 @@
 @import "tailwindcss-intersect";
 
 @theme {
+  --color-primary: #be2318;
+  --color-secondary: #f5b2d1;
   /* Her tilføjes theme variable // tokens */
 }
 
@@ -19,9 +21,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

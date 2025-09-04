@@ -1,0 +1,23 @@
+---
+import type { h2 } from "motion/react-client";
+
+// Henter parametrene fra Astro.props
+const { htmlheading = "h2", type = "medium", font = "sans", stylingclasses = "" } = Astro.props;
+const Htmlheading = htmlheading;
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
+const sizeClasses = {
+  h1: "uppercase font-bold text-[95px]/20 md:text-[160px]/30 break-all relative z-20 text-[#BE2318] ",
+  h2: "uppercase font-semibold text-3xl md:text-5xl mt-10 md:mt-20 text-[#BE2318]",
+  h3: "uppercase font-bold md:text-8xl text-7xl md:pl-30 md:col-span-12 md:mb-20 text-[#BE2318]",
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
+const fontClasses = {
+  display: "font-display",
+  sans: "font-sans",
+  serif: "font-serif",
+};
+---
+
+<Htmlheading class:list={[sizeClasses[type], fontClasses[font], stylingclasses]}><slot /></Htmlheading>

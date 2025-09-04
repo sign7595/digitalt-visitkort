@@ -2,48 +2,54 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <MainLayout title="Titel">
   <div class="fixed inset-0 -z-10 bg-repeat" style="background-image: url('/baggrundsstreg.png'); background-size: 40px;"></div>
-  <section class="relative md:my-50 my-30">
-    <h1 class="uppercase font-bold text-[95px]/20 md:text-[160px]/30 break-all relative z-20 text-[#BE2318]">multimediedesignermultimediedesignermultimediedesigner</h1>
+  <div class="flex flex-rows justify-between items-center text-center z-20 font-bold mt-5">
+    <Button variant="secondary" size="medium md:large" class="mt-5 md:mt-10 uppercase md:text-4xl"><a href="#Kompetencer">Kompetencer</a></Button>
+    <Button variant="secondary" size="medium md:large" class="mt-5 md:mt-10 uppercase"><a href="#socials">Socials</a></Button>
+  </div>
+  <section class="relative md:my-20 md:mb-50 mb-30 md:mt-30">
+    <Heading type="h1">multimediede<span class="text-secondary">signe</span>rmultimediedesignermultimediedesigner</Heading>
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-100 w-80 md:w-110 md:h-145 bg-pink-300 z-10"></div>
     <img src="/mig2.png" alt="profil billede" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 md:w-100 grayscale z-30" />
   </section>
   <section class="grid grid-cols-1 md:grid-cols-12 relative overflow-hidden md:h-screen">
     <div class="md:px-2 md:col-span-8 md:col-start-7 md:pr-20 items-center col-span-1 relative z-20 text-center md:text-left">
-      <h3 class="uppercase font-semibold text-3xl md:text-5xl mt-10 md:mt-20 text-[#BE2318]">visuel enktelhed med kant</h3>
-      <p class="md:mt-20 text-lg md:text-xl/7 px-20 md:px-0 md:pr-22">
+      <Heading type="h2">visuel enktelhed med kant</Heading>
+      <Text teksttype="brødtekst" class="md:mt-20 text-lg md:text-xl/7 px-20 md:px-0 md:pr-22">
         Jeg er en multimediedesigner med sans for rene, æstetiske linjer og et skarpt øje for detaljer. Mit arbejde balancerer det enkle og det dristige, hvor klarhed og funktionalitet møder modige visuelle greb. Jeg stræber efter at skabe design,
         der både føles tidløst og har karakter, og som formidler et klart budskab gennem et stærkt visuelt udtryk.
-      </p>
+      </Text>
     </div>
     <div class="w-full h-full md:w-full md:absolute md:inset-0 md:z-10 md:ml-0 md:mt-40">
       <img src="/streg1.png" alt="pyntestreg" class="w-340 h-full -ml-40 -mt-25 md:w-full md:h-full" />
     </div>
   </section>
-  <section class="-mt-20 md:mt-10 md:grid md:grid-cols-12 md:pl-30 overflow-hidden">
-    <h2 class="uppercase font-bold md:text-8xl text-7xl md:pl-30 md:col-span-12 md:mb-20 text-[#BE2318]">kompetencer</h2>
-    <div class="flex flex-col gap-10 md:pl-20 items-center md:col-span-4 md:col-start-2 md:text-xl/8 mt-5">
-      <p>figma prototyper</p>
-      <p>moodboard og styletile</p>
-      <p>canva</p>
-      <p>designsystemer</p>
-      <p>astro</p>
-      <p>HTML, CSS og javascript</p>
-      <p>git/github</p>
-      <p>foto og video redigering</p>
-      <p>adobe programmer</p>
+  <section id="Kompetencer" class="-mt-20 md:mt-10 md:grid md:grid-cols-12 md:pl-30 overflow-hidden">
+    <Heading type="h3">kompetencer</Heading>
+    <div class="flex flex-col gap-5 md:pl-20 items-center md:col-span-4 md:col-start-2 md:text-xl/8 mt-5">
+      <Text teksttype="bulletpoint">figma prototyper</Text>
+      <Text teksttype="bulletpoint">moodboard og styletile</Text>
+      <Text teksttype="bulletpoint">canva</Text>
+      <Text teksttype="bulletpoint">designsystemer</Text>
+      <Text teksttype="bulletpoint">astro</Text>
+      <Text teksttype="bulletpoint">HTML, CSS og javascript</Text>
+      <Text teksttype="bulletpoint">git/github</Text>
+      <Text teksttype="bulletpoint">foto og video redigering</Text>
+      <Text teksttype="bulletpoint">adobe programmer</Text>
     </div>
     <img src="/streg2.png" alt="pynte streg2" class="md:col-start-8 md:col-span-6 md:mt-20 h-100 md:h-300 ml-80 md:ml-20 -mt-45" />
   </section>
-  <section class="md:grid md:grid-cols-12 relative overflow-hidden">
+  <section id="socials" class="md:grid md:grid-cols-12 relative overflow-hidden">
     <div class="md:col-span-3">
       <img class="w-60 md:w-full md:h-300 -ml-15 md:ml-0" src="/streg3.png" alt="" />
     </div>
     <div class="md:col-span-6 md:col-start-5 md:pl-40 md:mt-20 md:mb-20 relative z-20">
-      <h2 class="uppercase font-bold md:text-8xl text-7xl ml-40 -mt-100 md:mt-0 text-[#BE2318]">Socials</h2>
+      <Heading type="h3">Socials</Heading>
       <div class="flex gap-10 md:mt-20 ml-50 mt-10">
         <Link href="https://www.facebook.com/profile.php?id=100009548483404&locale=da_DK">
           <img src="/Facebook.png" alt="facebook" class="md:w-20 w-12 transition-transform duration-300 hover:scale-125" />
